@@ -1,0 +1,70 @@
+\chapter{Requirements Analysis}
+\label{chap:requirements}
+
+This chapter defines the main requirements of the proposed visual geolocation system. It describes the functions the system is expected to perform, the quality requirements that guided its design, and the software used during development.
+
+\section{Functional Requirements}
+
+Table~\ref{tab:functional_requirements} summarizes the main functional requirements of the proposed system.
+
+\begin{table}[H]
+\centering
+\caption{Functional requirements}
+\label{tab:functional_requirements}
+\begin{tabularx}{\textwidth}{>{\bfseries}l X}
+\toprule
+ID & Requirement \\
+\midrule
+FR-01 & The system shall generate reference skyline profiles from a \Gls{dem}. \\
+FR-02 & The system shall accept a single landscape photograph as input. \\
+FR-03 & The system shall extract the mountain skyline from the input image. \\
+FR-04 & The system shall compare the extracted skyline with the reference database. \\
+FR-05 & The system shall estimate the camera location from the best matching skyline. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Non-Functional Requirements}
+
+Table~\ref{tab:nonfunctional_requirements} summarizes the non-functional requirements considered during the design of the system.
+
+\begin{table}[H]
+\centering
+\caption{Non-functional requirements}
+\label{tab:nonfunctional_requirements}
+\begin{tabularx}{\textwidth}{>{\bfseries}l X}
+\toprule
+ID & Requirement \\
+\midrule
+NFR-01 & The system shall perform localization without requiring an internet connection. \\
+NFR-02 & The system shall use a lightweight segmentation model to reduce computational cost. \\
+NFR-03 & The system shall produce consistent results for the same input image. \\
+NFR-04 & The system shall allow the reference skyline database to be regenerated for a different study area. \\
+NFR-05 & The system shall use a modular pipeline so that individual components can be updated independently. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Development Environment}
+
+The proposed system was developed using the software listed in Table~\ref{tab:development_environment}.
+
+\begin{table}[H]
+\centering
+\caption{Development environment}
+\label{tab:development_environment}
+\begin{tabular}{ll}
+\toprule
+Software & Purpose \\
+\midrule
+Python & Main programming language \\
+PyTorch & Training the segmentation model \\
+OpenCV & Image processing \\
+NumPy \& SciPy & Numerical computation \\
+Rasterio & Reading and processing \Gls{dem} data \\
+HORAYZON & Generating reference skylines \\
+Google Colab & Training the segmentation model \\
+\LaTeX & Project report preparation \\
+\bottomrule
+\end{tabular}
+\end{table}

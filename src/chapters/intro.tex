@@ -1,0 +1,65 @@
+\chapter{Introduction}
+
+\section{Background}
+
+Knowing one's location is essential for safe travel in mountainous regions. Modern navigation mainly depends on \Glspl{gnss}, such as \gls{gps}, together with online maps. These technologies work well in many places, but their performance becomes less reliable in deep mountain valleys. High mountain ridges can block satellite signals, and mobile network coverage is often unavailable in remote areas. As a result, trekkers, climbers, researchers, and rescue teams may not always have reliable location information when it is needed most.
+
+Unlike cities, mountains contain very few man-made landmarks that can be recognized automatically. However, mountains have one natural feature that changes very little over time: the skyline. The outline formed where the mountain meets the sky remains almost the same even when seasons, weather, vegetation, or lighting conditions change. Because of this stability, the skyline can act as a natural landmark for estimating location.
+
+Recent research has shown that skylines extracted from photographs can be compared with skylines generated from \Glspl{dem}. Since \Glspl{dem} describe the shape and elevation of the terrain, they can be used to generate reference skylines from many different viewpoints without visiting each location. A photograph can then be matched against these references to estimate where it was taken.
+
+Unlike satellite-based positioning, this approach depends only on the information already present in the photograph and the terrain model. As long as the mountain skyline is visible, the photograph itself becomes a source of geographic information. This makes skyline-based localization particularly attractive for remote mountain regions where navigation and communication infrastructure may be limited.
+
+Most previous studies have focused on mountain regions such as the European Alps or nearby hilly terrain in China. These environments differ from the Himalayas in several ways. The Khumbu region contains much larger elevation differences, fewer labelled photographs, and long mountain views that behave differently from nearby hills. Methods developed for other regions therefore cannot be applied directly without modification.
+
+This project investigates skyline-based visual geolocation for the Khumbu region of Nepal. By combining terrain data with computer vision, the proposed system estimates the location of a photograph using only the surrounding mountain skyline. The system is designed to operate without relying on continuous internet connectivity and aims to provide an additional source of location information when conventional navigation methods become unreliable.
+
+\section{Problem Statement}
+
+Reliable positioning remains a challenge in remote mountain environments. Although \Gls{gnss} receivers are widely available, their accuracy may decrease when surrounding terrain blocks satellite signals. Internet-based navigation services are also difficult to use where mobile network coverage is limited.
+
+Visual geolocation provides an alternative by estimating location directly from a photograph. Existing skyline-based methods have shown promising results, but most were developed for environments that differ from the Himalayas. Many assume the availability of large image datasets, nearby mountain ridges, or computational resources that are not suitable for lightweight offline systems.
+
+The Khumbu region introduces additional challenges. Labelled mountain images are scarce, mountain peaks are often several kilometres away from the camera, and weather conditions frequently reduce skyline visibility through clouds, haze, and changing illumination. These factors make accurate skyline extraction and matching more difficult while also reducing the effectiveness of methods designed for other environments.
+
+Therefore, there is a need for a visual geolocation system designed specifically for the Himalayan environment that can estimate location from a mountain photograph without relying on continuous \Gls{gnss} availability or internet connectivity.
+
+\section{Motivation}
+
+The Khumbu region is one of the world's most popular trekking and mountaineering destinations. Every year, thousands of visitors travel through its valleys, where reliable location information is important for navigation and safety. An alternative positioning method may also assist environmental surveys, mountain research, and the analysis of landscape photographs captured in remote areas.
+
+At the same time, freely available terrain data and recent advances in computer vision have made skyline-based localization increasingly practical. \Glspl{dem} allow realistic reference skylines to be generated without visiting every viewpoint, while modern image segmentation techniques can accurately separate the sky from the surrounding mountains.
+
+These developments create an opportunity to build a lightweight visual geolocation system for the Himalayas. Rather than replacing conventional navigation methods, the proposed system is intended to provide an additional source of location information when satellite navigation or communication services become unreliable.
+
+\section{Objectives}
+
+The main objective of this project is to develop and evaluate an offline visual geolocation system for the Khumbu region of Nepal using mountain skylines.
+
+The specific objectives are:
+
+\begin{enumerate}
+    \item To generate a reference database of mountain skylines from a \Gls{dem}.
+    \item To develop a lightweight skyline extraction and matching pipeline capable of estimating the location of a photograph.
+\end{enumerate}
+
+\section{Scope and Limitations}
+
+\subsection{Scope}
+
+This project focuses on skyline-based visual geolocation within the Khumbu region of Nepal. The reference database is generated from the Copernicus GLO-30 \Gls{dem} using viewpoints sampled on a regular grid. The system accepts a single landscape photograph as input and estimates the camera location by matching its skyline with the reference database.
+
+\subsection{Limitations}
+
+The proposed system assumes that the mountain skyline is clearly visible in the input image. Heavy cloud cover, dense foreground vegetation, nearby buildings, and severe occlusions may reduce localization accuracy. The segmentation model is trained mainly using synthetic images because large labelled Himalayan datasets are not available. The system is evaluated primarily using synthetic test images, while extensive validation using real-world photographs remains future work.
+
+\section{Applications}
+
+The proposed framework has the following applications:
+
+\begin{itemize}
+    \item Estimating the approximate location of a mountain photograph using the surrounding skyline.
+    \item Assisting mountain photography by estimating where a landscape photograph was taken.
+    \item Supporting environmental and geographic field studies in remote mountain regions.
+    \item Serving as a foundation for future offline mountain localization systems.
+\end{itemize}

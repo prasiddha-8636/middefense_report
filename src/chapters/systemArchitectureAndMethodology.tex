@@ -385,6 +385,7 @@ The skyline is extracted independently for every image column. Starting from the
 Small discontinuities caused by segmentation errors are removed using a median filter. This smooths the extracted skyline while preserving the overall terrain shape.
 
 \subsection{Elevation Angle Computation}
+\label{sec:elevation_computation}
 
 The detected skyline is represented as image coordinates. These coordinates are converted into viewing rays using the camera field of view and image dimensions.
 
@@ -392,6 +393,7 @@ The elevation angle of each viewing ray is computed as
 
 \begin{equation}
 \theta=\sin^{-1}(r_y),
+\label{eq:elevation}
 \end{equation}
 
 where $r_y$ is the vertical component of the normalized viewing ray.
@@ -400,6 +402,7 @@ The corresponding azimuth angle is computed as
 
 \begin{equation}
 \phi=\tan^{-1}\left(\frac{r_x}{-r_z}\right),
+\label{eq:azimuth}
 \end{equation}
 
 where $r_x$ and $r_z$ are the horizontal components of the viewing ray.
