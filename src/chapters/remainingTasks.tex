@@ -1,0 +1,37 @@
+\chapter{Remaining Tasks}
+
+The project has produced a working prototype for skyline-based visual geolocation in the Khumbu region. The next phase focuses on validation and reliability improvements for practical deployment.
+
+\section{Google Street View Validation}
+
+The current evaluation uses synthetic images generated from the terrain model. While this provides accurate ground-truth locations, synthetic images cannot fully represent real photographs.
+
+The next stage of this work is to evaluate the system using Google Street View images. These images contain challenges such as haze, shadows, foreground objects, and changing lighting conditions that are difficult to reproduce synthetically.
+
+Comparing these results with the synthetic benchmark will clarify how performance changes under real-world conditions.
+
+\section{Automatic Failure Detection}
+
+The system currently always returns a location estimate, even when the extracted skyline contains too little information for reliable matching.
+
+Future work will investigate methods for detecting poor-quality skyline profiles before localization. Images with heavy occlusion, weak skyline structure, or large foreground objects may be rejected automatically instead of producing unreliable results.
+
+This would improve the reliability of the system when processing difficult images.
+
+\section{Landmark Association}
+
+The system currently returns the estimated camera location and viewing direction. Future work will integrate geographic landmark databases to provide additional context about the surrounding terrain.
+
+After localization, visible mountain peaks and other landmarks could be identified automatically from the estimated viewpoint. This would make the localization results easier to interpret and verify.
+
+\section{Off-Grid Robustness with Supporting Height Filtering}
+
+The current quantitative evaluation is based on grid-aligned synthetic queries. Future evaluation should therefore include off-grid queries where the true camera position lies between reference viewpoints, which better reflects real user positions in the field.
+
+In this off-grid setting, height filtering can be used to reduce ambiguity between similar skyline shapes at different altitudes.
+
+Because current filtering results are preliminary and measured on grid-aligned data, future work should verify whether the same trend holds when off-grid queries and realistic elevation uncertainty are introduced.
+
+\section{Summary}
+
+The remaining work emphasizes real-world validation and stronger reliability in difficult conditions. Off-grid robustness is a key next step, with height filtering treated as a supporting technique within that broader evaluation. Together, these tasks will strengthen practical usability while preserving the core localization framework.
