@@ -66,9 +66,9 @@ Z.~Pan, J.~Tang, T.~Tjahjadi, and F.~Guo, ``Fast geo-location method based on
   Geo-Information}, vol.~10, no.~8, p. 537, 2021.
 
 \bibitem{brejcha2019geopose3k}
-J.~Brejcha and M.~{\v{C}}ad{\'i}k, ``{GeoPose3K}: Mountain landscape dataset
-  for camera pose estimation in outdoor environments,'' Faculty of Information
-  Technology, Brno University of Technology, Tech. Rep., 2019.
+J.~Brejcha and M.~Cadik, ``{GeoPose3K}: Mountain landscape dataset for camera
+  pose estimation in outdoor environments,'' Faculty of Information Technology,
+  Brno University of Technology, Tech. Rep., 2019.
 
 \bibitem{woo2007robust}
 S.~W. Yang, I.~C. Kim, and J.~S. Kim, ``Robust skyline extraction algorithm for
@@ -77,16 +77,16 @@ S.~W. Yang, I.~C. Kim, and J.~S. Kim, ``Robust skyline extraction algorithm for
   253--257.
 
 \bibitem{ahmad2021resource}
-T.~Ahmad, E.~Emami, M.~{\v{C}}ad{\'i}k, and G.~Bebis, ``Resource efficient
-  mountainous skyline extraction using shallow learning,'' in
-  \emph{International Joint Conference on Neural Networks (IJCNN)}.\hskip 1em
-  plus 0.5em minus 0.4em\relax IEEE, 2021, pp. 1--9.
+T.~Ahmad, E.~Emami, M.~Cadik, and G.~Bebis, ``Resource efficient mountainous
+  skyline extraction using shallow learning,'' in \emph{International Joint
+  Conference on Neural Networks (IJCNN)}.\hskip 1em plus 0.5em minus
+  0.4em\relax IEEE, 2021, pp. 1--9.
 
 \bibitem{tomesek2022crosslocate}
-J.~Tome{\v{s}}ek, M.~{\v{C}}ad{\'i}k, and J.~Brejcha, ``{CrossLocate}:
-  Cross-modal large-scale visual geo-localization in natural environments using
-  rendered modalities,'' in \emph{IEEE/CVF Winter Conference on Applications of
-  Computer Vision (WACV)}, 2022, pp. 3174--3183.
+J.~Tomesek, M.~Cadik, and J.~Brejcha, ``{CrossLocate}: Cross-modal large-scale
+  visual geo-localization in natural environments using rendered modalities,''
+  in \emph{IEEE/CVF Winter Conference on Applications of Computer Vision
+  (WACV)}, 2022, pp. 3174--3183.
 
 \bibitem{liu2023cmlocate}
 Z.~Liu, F.~Guo, H.~Liu, X.~Xiao, and J.~Tang, ``{CMLocate}: A cross-modal

@@ -1,4 +1,4 @@
-PWD /home/admin/github_MinorMidDefense
+PWD /home/admin/MinorMidDefense
 INPUT /usr/share/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
 INPUT main.tex
@@ -320,8 +320,6 @@ INPUT /usr/share/texmf-dist/tex/latex/glossaries/styles/glossary-super.sty
 INPUT /usr/share/texmf-dist/tex/latex/supertabular/supertabular.sty
 INPUT /usr/share/texmf-dist/tex/latex/glossaries/styles/glossary-tree.sty
 INPUT /usr/share/texmf-dist/tex/latex/glossaries/styles/glossary-tree.sty
-OUTPUT build/main.acn
-OUTPUT build/main.slo
 INPUT /usr/share/texmf-dist/tex/latex/url/url.sty
 INPUT /usr/share/texmf-dist/tex/latex/url/url.sty
 INPUT /usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
@@ -617,7 +615,6 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/newtx/ntxsyc.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/newtx/ntxexa.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/newtx/ntxexa.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/newtx/ntxexa.tfm
-OUTPUT build/main.ist
 INPUT /usr/share/texmf-dist/fonts/vf/adobe/times/ptmb8t.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map

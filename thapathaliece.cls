@@ -155,7 +155,7 @@
 
 % GLOSSARIES
 \RequirePackage[acronym,symbols,nomain,nonumberlist,nopostdot,translate=false,nogroupskip]{glossaries}
-\makeglossaries
+\makenoidxglossaries
 
 % Custom glossary style with uniform spacing
 \newglossarystyle{uniformlist}{%
