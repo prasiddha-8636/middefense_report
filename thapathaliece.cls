@@ -29,6 +29,8 @@
     parskip=false  % Disable KOMA's paragraph spacing adjustments
 ]{scrreprt}
 
+\RequirePackage{afterpage}
+
 % ============================================================
 % LANGUAGE SUPPORT (must be loaded early)
 % ============================================================
@@ -154,7 +156,7 @@
 \newtheorem{note}[theorem]{Note}
 
 % GLOSSARIES
-\RequirePackage[acronym,symbols,nomain,nonumberlist,nopostdot,translate=false,nogroupskip]{glossaries}
+\RequirePackage[acronym,symbols,nomain,nonumberlist,nopostdot,translate=false,nogroupskip,toc]{glossaries}
 \makenoidxglossaries
 
 % Custom glossary style with uniform spacing

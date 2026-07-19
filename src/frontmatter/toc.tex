@@ -9,17 +9,20 @@
 \tableofcontents
 \listoffigures
 \listoftables
+\clearpage
+\phantomsection
+\addcontentsline{toc}{chapter}{LIST OF ALGORITHMS}
 \listofalgorithms
 
 % LIST OF ABBREVIATIONS
 % Automatically generated from acronyms used in the document
-\addcontentsline{toc}{chapter}{LIST OF ABBREVIATIONS}
+\afterpage{\clearpage}
 \glsaddall
-\printnoidxglossary[type=\acronymtype,title={LIST OF ABBREVIATIONS}]
+\printnoidxglossary[type=\acronymtype,title={LIST OF ABBREVIATIONS},toctitle={LIST OF ABBREVIATIONS}]
 \glsresetall
 
 % LIST OF SYMBOLS
 % Automatically generated from symbols used in the document
 % \addcontentsline{toc}{chapter}{LIST OF SYMBOLS}
-% \printglossary[type=symbols,title={LIST OF SYMBOLS}]
+% \printglossary[type=symbols,title={LIST OF SYMBOLS},toctitle={LIST OF SYMBOLS}]
 % \clearpage

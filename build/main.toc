@@ -3,7 +3,8 @@
 \contentsline {chapter}{ABSTRACT}{ii}{section*.4}%
 \contentsline {chapter}{\nonumberline LIST OF FIGURES}{v}{chapter*.6}%
 \contentsline {chapter}{\nonumberline LIST OF TABLES}{vi}{chapter*.7}%
-\contentsline {chapter}{LIST OF ABBREVIATIONS}{vii}{chapter*.8}%
+\contentsline {chapter}{LIST OF ALGORITHMS}{vii}{section*.8}%
+\contentsline {chapter}{LIST OF ABBREVIATIONS}{viii}{section*.10}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Background}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Problem Statement}{2}{section.1.2}%
@@ -25,7 +26,7 @@
 \contentsline {section}{\numberline {3.1}Functional Requirements}{12}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Non-Functional Requirements}{12}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Development Environment}{12}{section.3.3}%
-\contentsline {chapter}{\numberline {4}SYSTEM ARCHITECTURE AND METHODOLOGY}{14}{chapter.4}%
+\contentsline {chapter}{\numberline {4}System Architecture and Methodology}{14}{chapter.4}%
 \contentsline {section}{\numberline {4.1}System Overview}{14}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Study Area}{15}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Reference Skyline Database}{16}{section.4.3}%
@@ -75,5 +76,5 @@
 \contentsline {chapter}{APPENDICES}{40}{section.7.5}%
 \contentsline {chapter}{\numberline {A}PROJECT TIMELINE}{40}{appendix.A}%
 \contentsline {section}{\numberline {A.1}Gantt Chart}{40}{section.A.1}%
-\contentsline {chapter}{\nonumberline REFERENCES}{41}{chapter*.30}%
+\contentsline {chapter}{\nonumberline REFERENCES}{41}{chapter*.31}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
