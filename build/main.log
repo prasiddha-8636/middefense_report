@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.5.31)  19 JUL 2026 02:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.5.31)  19 JUL 2026 22:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2188,7 +2188,7 @@ chapter 4.
 [14
 
 ] [15]
-<src/images/roi.png, id=323, 1111.15125pt x 832.10875pt>
+<src/images/roi.png, id=325, 1111.15125pt x 832.10875pt>
 File: src/images/roi.png Graphic file (type png)
 <use src/images/roi.png>
 Package pdftex.def Info: src/images/roi.png  used on input line 95.
@@ -2210,7 +2210,7 @@ LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
 (Font)              scaled to size 6.6pt on input line 76.
  [28] [29]) (./src/chapters/resultAndAnalysis.tex [30]
 chapter 6.
-<src/images/horizon_database.png, id=436, 1169.36874pt x 522.95375pt>
+<src/images/horizon_database.png, id=438, 1169.36874pt x 522.95375pt>
 File: src/images/horizon_database.png Graphic file (type png)
 <use src/images/horizon_database.png>
 Package pdftex.def Info: src/images/horizon_database.png  used on input line 35
@@ -2219,40 +2219,40 @@ Package pdftex.def Info: src/images/horizon_database.png  used on input line 35
 [31
 
  <./src/images/horizon_database.png>]
-<src/images/synthetic.png, id=443, 714.7503pt x 271.7352pt>
+<src/images/synthetic.png, id=445, 714.7503pt x 271.7352pt>
 File: src/images/synthetic.png Graphic file (type png)
 <use src/images/synthetic.png>
 Package pdftex.def Info: src/images/synthetic.png  used on input line 50.
 (pdftex.def)             Requested size: 341.80602pt x 129.95042pt.
-<src/images/synthetic1.png, id=444, 847.165pt x 322.20375pt>
+<src/images/synthetic1.png, id=446, 847.165pt x 322.20375pt>
 File: src/images/synthetic1.png Graphic file (type png)
 <use src/images/synthetic1.png>
 Package pdftex.def Info: src/images/synthetic1.png  used on input line 58.
 (pdftex.def)             Requested size: 341.80602pt x 130.00015pt.
-<src/images/synthetic2.png, id=445, 847.165pt x 322.20375pt>
+<src/images/synthetic2.png, id=447, 847.165pt x 322.20375pt>
 File: src/images/synthetic2.png Graphic file (type png)
 <use src/images/synthetic2.png>
 Package pdftex.def Info: src/images/synthetic2.png  used on input line 66.
 (pdftex.def)             Requested size: 341.80602pt x 130.00015pt.
-<src/images/plot_unet.png, id=447, 1293.633pt x 354.123pt>
+<src/images/plot_unet.png, id=449, 1293.633pt x 354.123pt>
 File: src/images/plot_unet.png Graphic file (type png)
 <use src/images/plot_unet.png>
 Package pdftex.def Info: src/images/plot_unet.png  used on input line 79.
 (pdftex.def)             Requested size: 416.83289pt x 114.10516pt.
  [32 <./src/images/synthetic.png> <./src/images/synthetic1.png> <./src/images/s
 ynthetic2.png>]
-<src/images/plot_accuracy.png, id=458, 578.16pt x 361.35pt>
+<src/images/plot_accuracy.png, id=460, 578.16pt x 361.35pt>
 File: src/images/plot_accuracy.png Graphic file (type png)
 <use src/images/plot_accuracy.png>
 Package pdftex.def Info: src/images/plot_accuracy.png  used on input line 112.
 (pdftex.def)             Requested size: 312.62466pt x 195.39075pt.
  [33 <./src/images/plot_unet.png>] [34 <./src/images/plot_accuracy.png>]
-<src/images/visualize0.png, id=476, 867.24pt x 722.7pt>
+<src/images/visualize0.png, id=478, 867.24pt x 722.7pt>
 File: src/images/visualize0.png Graphic file (type png)
 <use src/images/visualize0.png>
 Package pdftex.def Info: src/images/visualize0.png  used on input line 143.
 (pdftex.def)             Requested size: 375.14705pt x 312.61859pt.
-<src/images/visualize1.png, id=477, 867.24pt x 722.7pt>
+<src/images/visualize1.png, id=479, 867.24pt x 722.7pt>
 File: src/images/visualize1.png Graphic file (type png)
 <use src/images/visualize1.png>
 Package pdftex.def Info: src/images/visualize1.png  used on input line 151.
@@ -2261,11 +2261,11 @@ Package pdftex.def Info: src/images/visualize1.png  used on input line 151.
 chapters/remainingTasks.tex
 [37]
 chapter 7.
-) [38
+[38
 
-] [39] (./src/backmatter/back.tex
+]) [39] (./src/backmatter/back.tex
 chapter A.
-<src/images/figures/gantt.png, id=505, 1004.3121pt x 607.068pt>
+<src/images/figures/gantt.png, id=507, 1004.3121pt x 607.068pt>
 File: src/images/figures/gantt.png Graphic file (type png)
 <use src/images/figures/gantt.png>
 Package pdftex.def Info: src/images/figures/gantt.png  used on input line 132.
@@ -2284,10 +2284,10 @@ L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 58252 strings out of 469515
- 1240023 string characters out of 5470807
- 2032357 words of memory out of 5000000
- 85565 multiletter control sequences out of 15000+600000
+ 58254 strings out of 469515
+ 1240040 string characters out of 5470807
+ 2032358 words of memory out of 5000000
+ 85566 multiletter control sequences out of 15000+600000
  703168 words of font info for 292 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  198i,20n,295p,11208b,1556s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2299,10 +2299,10 @@ fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/
 utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb></usr/share
 /texmf-dist/fonts/type1/public/newtx/ztmb.pfb></usr/share/texmf-dist/fonts/type
 1/public/newtx/ztmr.pfb>
-Output written on build/main.pdf (52 pages, 4035507 bytes).
+Output written on build/main.pdf (52 pages, 4036894 bytes).
 PDF statistics:
- 774 PDF objects out of 1000 (max. 8388607)
- 671 compressed objects within 7 object streams
- 184 named destinations out of 1000 (max. 500000)
- 46076 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 779 PDF objects out of 1000 (max. 8388607)
+ 676 compressed objects within 7 object streams
+ 185 named destinations out of 1000 (max. 500000)
+ 46084 words of extra memory for PDF output out of 51595 (max. 10000000)
 
