@@ -4,13 +4,13 @@
 \contentsline {figure}{\numberline {4-3}{\ignorespaces Reference skyline database generation process.}}{17}{figure.caption.18}%
 \contentsline {figure}{\numberline {4-4}{\ignorespaces Synthetic dataset generation process.}}{19}{figure.caption.19}%
 \contentsline {figure}{\numberline {4-5}{\ignorespaces Skyline segmentation process.}}{21}{figure.caption.20}%
-\contentsline {figure}{\numberline {4-6}{\ignorespaces Skyline extraction process.}}{22}{figure.caption.21}%
-\contentsline {figure}{\numberline {4-7}{\ignorespaces Skyline matching process.}}{24}{figure.caption.22}%
-\contentsline {figure}{\numberline {6-1}{\ignorespaces Reference skyline database preview used during matching.}}{31}{figure.caption.24}%
-\contentsline {figure}{\numberline {6-2}{\ignorespaces Examples of synthetic query images used for evaluation.}}{32}{figure.caption.25}%
-\contentsline {figure}{\numberline {6-3}{\ignorespaces Training and validation curves of the segmentation model.}}{33}{figure.caption.26}%
-\contentsline {figure}{\numberline {6-4}{\ignorespaces Localization accuracy at different distance thresholds.}}{34}{figure.caption.28}%
-\contentsline {figure}{\numberline {6-5}{\ignorespaces Representative localization visualizations from the grid-aligned test set.}}{36}{figure.caption.29}%
+\contentsline {figure}{\numberline {4-6}{\ignorespaces Skyline extraction process.}}{23}{figure.caption.21}%
+\contentsline {figure}{\numberline {4-7}{\ignorespaces Skyline matching process.}}{25}{figure.caption.22}%
+\contentsline {figure}{\numberline {6-1}{\ignorespaces Reference skyline database preview used during matching.}}{35}{figure.caption.24}%
+\contentsline {figure}{\numberline {6-2}{\ignorespaces Examples of synthetic query images used for evaluation.}}{36}{figure.caption.25}%
+\contentsline {figure}{\numberline {6-3}{\ignorespaces Training and validation curves of the segmentation model.}}{37}{figure.caption.26}%
+\contentsline {figure}{\numberline {6-4}{\ignorespaces Localization accuracy at different distance thresholds.}}{38}{figure.caption.28}%
+\contentsline {figure}{\numberline {6-5}{\ignorespaces Representative localization visualizations from the grid-aligned test set.}}{40}{figure.caption.29}%
 \def \@chapapp {\appendixname }
-\contentsline {figure}{\numberline {A-1}{\ignorespaces Project Gantt Chart}}{40}{figure.caption.30}%
+\contentsline {figure}{\numberline {A-1}{\ignorespaces Project Gantt Chart}}{44}{figure.caption.30}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

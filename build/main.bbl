@@ -27,10 +27,10 @@ P.~C. Naval, M.~Mukunoki, M.~Minoh, and K.~Ikeda, ``Estimating camera position
   Pattern Sensing Group Research Meeting, Society of Instrument and Control
   Engineers}, 1997, pp. 9--16.
 
-\bibitem{gupta2008camera}
-H.~Gupta and S.~Brennan, ``Camera pose estimation by alignment of mountain
-  peaks,'' \emph{Computer Vision and Image Understanding}, vol. 110, no.~3, pp.
-  311--324, 2008.
+\bibitem{naval1998camera}
+P.~C. Naval, ``Camera pose estimation by alignment from a single mountain
+  image,'' in \emph{International Symposium on Intelligent Robotic Systems},
+  1998, pp. 157--163.
 
 \bibitem{baatz2012}
 G.~Baatz, O.~Saurer, K.~K{\"o}ser, and M.~Pollefeys, ``Large scale visual
@@ -65,10 +65,10 @@ Z.~Pan, J.~Tang, T.~Tjahjadi, and F.~Guo, ``Fast geo-location method based on
   panoramic skyline in hilly area,'' \emph{ISPRS International Journal of
   Geo-Information}, vol.~10, no.~8, p. 537, 2021.
 
-\bibitem{brejcha2019geopose3k}
+\bibitem{brejcha2017geopose3k}
 J.~Brejcha and M.~{\v{C}}ad{\'i}k, ``{GeoPose3K}: Mountain landscape dataset
-  for camera pose estimation in outdoor environments,'' Faculty of Information
-  Technology, Brno University of Technology, Tech. Rep., 2019.
+  for camera pose estimation in outdoor environments,'' \emph{Image and Vision
+  Computing}, vol.~66, pp. 1--14, 2017.
 
 \bibitem{woo2007robust}
 S.~W. Yang, I.~C. Kim, and J.~S. Kim, ``Robust skyline extraction algorithm for

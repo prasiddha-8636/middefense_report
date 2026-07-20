@@ -6,7 +6,7 @@ The project has produced a working prototype for skyline-based visual geolocatio
 
 The current evaluation uses synthetic images generated from the terrain model. While this provides accurate ground-truth locations, synthetic images cannot fully represent real photographs.
 
-The next stage of this work is to evaluate the system using \gls{gsv} images. These images contain challenges such as haze, shadows, foreground objects, and changing lighting conditions that are difficult to reproduce synthetically.
+The next stage of this work is to evaluate the system using \gls{gsv} images. These images contain challenges such as haze, shadows, foreground objects, and changing lighting conditions that are difficult to reproduce synthetically. The Everest Base Camp trekking route already has Google Street View coverage, so real-world validation can be performed without collecting new field data.
 
 Comparing these results with the synthetic benchmark will clarify how performance changes under real-world conditions.
 
@@ -24,7 +24,7 @@ The system currently returns the estimated camera location and viewing direction
 
 After localization, visible mountain peaks and other landmarks could be identified automatically from the estimated viewpoint. This would make the localization results easier to interpret and verify.
 
-\section{Off-Grid Robustness with Supporting Height Filtering}
+\section{Off-Grid Robustness}
 
 The current quantitative evaluation is based on grid-aligned synthetic queries. Future evaluation should therefore include off-grid queries where the true camera position lies between reference viewpoints, which better reflects real user positions in the field.
 

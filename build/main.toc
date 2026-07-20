@@ -14,7 +14,7 @@
 \contentsline {subsection}{\numberline {1.5.1}Scope}{3}{subsection.1.5.1}%
 \contentsline {subsection}{\numberline {1.5.2}Limitations}{3}{subsection.1.5.2}%
 \contentsline {section}{\numberline {1.6}Applications}{3}{section.1.6}%
-\contentsline {chapter}{\numberline {2}LITERATURE REVIEW}{4}{chapter.2}%
+\contentsline {chapter}{\numberline {2}Literature Review}{4}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Visual Geolocation in Mountainous Terrain}{4}{section.2.1}%
 \contentsline {section}{\numberline {2.2}\Glspl {dem}}{5}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Improving Skyline Matching}{5}{section.2.3}%
@@ -33,48 +33,48 @@
 \contentsline {subsection}{\numberline {4.3.1}Viewpoint Generation}{17}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}Skyline Generation}{17}{subsection.4.3.2}%
 \contentsline {subsection}{\numberline {4.3.3}Skyline Filtering}{18}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}Database Storage}{18}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.4}Database Storage}{19}{subsection.4.3.4}%
 \contentsline {section}{\numberline {4.4}Synthetic Query Dataset}{19}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Scene Generation}{19}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.1}Scene Generation}{20}{subsection.4.4.1}%
 \contentsline {subsection}{\numberline {4.4.2}Automatic Sky Mask Generation}{20}{subsection.4.4.2}%
 \contentsline {subsection}{\numberline {4.4.3}Ground Truth Storage}{20}{subsection.4.4.3}%
 \contentsline {section}{\numberline {4.5}Skyline Segmentation}{20}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Sky Segmentation}{21}{subsection.4.5.1}%
-\contentsline {subsection}{\numberline {4.5.2}Mask Refinement}{21}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.1}Sky Segmentation}{22}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Mask Refinement}{22}{subsection.4.5.2}%
 \contentsline {section}{\numberline {4.6}Skyline Extraction}{22}{section.4.6}%
 \contentsline {subsection}{\numberline {4.6.1}Skyline Detection}{23}{subsection.4.6.1}%
 \contentsline {subsection}{\numberline {4.6.2}Elevation Angle Computation}{23}{subsection.4.6.2}%
-\contentsline {subsection}{\numberline {4.6.3}Profile Validation}{23}{subsection.4.6.3}%
-\contentsline {section}{\numberline {4.7}Skyline Matching}{23}{section.4.7}%
-\contentsline {subsection}{\numberline {4.7.1}Feature Extraction}{24}{subsection.4.7.1}%
+\contentsline {subsection}{\numberline {4.6.3}Profile Validation}{24}{subsection.4.6.3}%
+\contentsline {section}{\numberline {4.7}Skyline Matching}{24}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Feature Extraction}{25}{subsection.4.7.1}%
 \contentsline {subsection}{\numberline {4.7.2}Candidate Selection}{25}{subsection.4.7.2}%
-\contentsline {subsection}{\numberline {4.7.3}Profile Alignment}{25}{subsection.4.7.3}%
-\contentsline {subsection}{\numberline {4.7.4}Candidate Ranking}{25}{subsection.4.7.4}%
-\contentsline {chapter}{\numberline {5}Implementation Details}{26}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Reference Skyline Database Implementation}{26}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Synthetic Dataset Generation}{27}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Sky Segmentation Implementation}{27}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Skyline Extraction Implementation}{28}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Skyline Matching Implementation}{29}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Evaluation Implementation}{30}{section.5.6}%
-\contentsline {chapter}{\numberline {6}Results and Analysis}{31}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Evaluation Setup}{31}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Synthetic Query Images}{32}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Segmentation Training Result}{33}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Localization Accuracy}{33}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Result Interpretation}{34}{subsection.6.4.1}%
-\contentsline {subsection}{\numberline {6.4.2}Evaluation Limitations}{35}{subsection.6.4.2}%
-\contentsline {section}{\numberline {6.5}Qualitative Examples}{35}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Summary}{37}{section.6.6}%
-\contentsline {chapter}{\numberline {7}Remaining Tasks}{38}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Google Street View Validation}{38}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Automatic Failure Detection}{38}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Landmark Association}{38}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Off-Grid Robustness with Supporting Height Filtering}{38}{section.7.4}%
-\contentsline {section}{\numberline {7.5}Summary}{39}{section.7.5}%
+\contentsline {subsection}{\numberline {4.7.3}Profile Alignment}{26}{subsection.4.7.3}%
+\contentsline {subsection}{\numberline {4.7.4}Candidate Ranking}{26}{subsection.4.7.4}%
+\contentsline {chapter}{\numberline {5}Implementation Details}{27}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Reference Skyline Database Implementation}{27}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Synthetic Dataset Generation}{28}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Sky Segmentation Implementation}{29}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Skyline Extraction Implementation}{30}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Skyline Matching Implementation}{30}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Evaluation Implementation}{32}{section.5.6}%
+\contentsline {chapter}{\numberline {6}Results and Analysis}{34}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Evaluation Setup}{34}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Synthetic Query Images}{35}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Segmentation Training Result}{36}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Localization Accuracy}{37}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Result Interpretation}{38}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Evaluation Limitations}{39}{subsection.6.4.2}%
+\contentsline {section}{\numberline {6.5}Qualitative Examples}{39}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Summary}{41}{section.6.6}%
+\contentsline {chapter}{\numberline {7}Remaining Tasks}{42}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Google Street View Validation}{42}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Automatic Failure Detection}{42}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Landmark Association}{42}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Off-Grid Robustness}{43}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Summary}{43}{section.7.5}%
 \def \@chapapp {\appendixname }
-\contentsline {chapter}{APPENDICES}{40}{section.7.5}%
-\contentsline {chapter}{\numberline {A}PROJECT TIMELINE}{40}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Gantt Chart}{40}{section.A.1}%
-\contentsline {chapter}{\nonumberline REFERENCES}{41}{chapter*.31}%
+\contentsline {chapter}{APPENDICES}{44}{section.7.5}%
+\contentsline {chapter}{\numberline {A}PROJECT TIMELINE}{44}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Gantt Chart}{44}{section.A.1}%
+\contentsline {chapter}{\nonumberline REFERENCES}{45}{chapter*.31}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

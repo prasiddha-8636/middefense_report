@@ -1,10 +1,10 @@
-\chapter{LITERATURE REVIEW}
+\chapter{Literature Review}
 
 \section{Visual Geolocation in Mountainous Terrain}
 
 Visual geolocation estimates the location where a photograph was taken using information contained in the image. In urban environments, buildings, roads, and other man-made structures provide many distinctive landmarks that can be matched with reference images. Mountain environments are much more challenging because natural landscapes contain fewer unique visual features. Their appearance also changes with weather, lighting, snow cover, and seasonal vegetation, making conventional image matching less reliable.
 
-Researchers found that one feature remains relatively stable despite these changes: the mountain skyline. Although snow and vegetation may change throughout the year, the boundary between the mountains and the sky is determined by the terrain itself. This makes the skyline a reliable geographic feature for estimating camera position. Early studies demonstrated that mountain skylines generated from \Glspl{dem} could be aligned with photographs to recover the camera location and orientation \cite{naval1997,gupta2008camera}. These works established the foundation for later skyline-based localization methods.
+Researchers found that one feature remains relatively stable despite these changes: the mountain skyline. Although snow and vegetation may change throughout the year, the boundary between the mountains and the sky is determined by the terrain itself. This makes the skyline a reliable geographic feature for estimating camera position. Early studies demonstrated that mountain skylines generated from \Glspl{dem} could be aligned with photographs to recover the camera location and orientation \cite{naval1997,naval1998camera}. These works established the foundation for later skyline-based localization methods.
 
 A major step towards large-scale visual geolocation was presented by \cite{baatz2012}. Instead of matching individual mountain peaks, they represented panoramic skylines using contour descriptors extracted from \Gls{dem}-generated terrain models. Since a photograph usually contains only part of the surrounding horizon, the system searched for reference panoramas that contained the observed skyline rather than requiring a complete match. Their experiments over approximately 40,000 km$^2$ of Switzerland demonstrated that skyline shape alone contains sufficient information for large-scale localization.
 
@@ -58,7 +58,7 @@ As skyline databases became larger, the computational cost of searching every re
 
 Although these methods advanced skyline matching considerably, they were developed for landscapes that differ from the Himalayan environment. The European studies focused on the Alps, while the work of \cite{pan2021fast} considered densely hilly terrain where nearby viewpoints produce rapidly changing skylines. In the Himalayas, mountain peaks are typically much farther from the observer, causing the skyline to remain relatively stable over neighbouring viewpoints. Consequently, techniques designed specifically for nearby hills, such as dense lapel-point representations and fine-scale viewpoint sampling, become less important. Instead, robust skyline extraction and efficient matching are more critical for reliable localization in high mountain regions.
 
-A notable benchmark for visual geolocation in mountainous terrain is the GeoPose3K dataset \cite{brejcha2019geopose3k}, which contains mountain images with associated ground truth locations. This dataset has been used by multiple research groups to evaluate and compare localization methods under real-world conditions, making it useful for situating new approaches within the broader field.
+A notable benchmark for visual geolocation in mountainous terrain is the GeoPose3K dataset \cite{brejcha2017geopose3k}, which contains mountain images with associated ground truth locations. This dataset has been used by multiple research groups to evaluate and compare localization methods under real-world conditions, making it useful for situating new approaches within the broader field.
 
 \section{Skyline Extraction}
 

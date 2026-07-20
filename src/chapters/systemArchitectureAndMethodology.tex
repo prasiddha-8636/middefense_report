@@ -88,7 +88,7 @@ Terrain information is obtained from the Copernicus GLO-30 \gls{dem}. The datase
 
 The study area is defined before database generation. Only viewpoints located inside the selected boundary are used when generating reference skylines. Restricting the search area reduces the database size while ensuring that every reference skyline corresponds to a valid location within the study region.
 
-Figure~\ref{fig:study_area} shows the selected study area.
+The blue line shown in Figure~\ref{fig:study_area} represents the available Google Street View coverage used for future real-world validation.
 
 \begin{figure}[H]
     \centering
@@ -162,7 +162,7 @@ The elevation angle is computed as
 \label{eq:elevation_angle}
 \end{equation}
 
-where $h_t$ is the terrain elevation, $h_o$ is the observer elevation, and $d$ is the horizontal distance between the observer and the terrain point.
+where $h_t$ is the terrain elevation, $h_o$ is the observer elevation, and $d$ is the horizontal distance between the observer and the terrain point. Equation~(4-1) is written in its flat-Earth form for clarity. In the implemented pipeline, Earth curvature and atmospheric refraction---which can introduce $\sim 0.1^\circ$ of elevation angle error at 30~km---are corrected internally by HORAYZON during skyline generation.
 
 Repeating this process for all azimuth directions produces a one-dimensional skyline profile that describes the visible terrain surrounding the viewpoint.
 
@@ -188,7 +188,7 @@ Algorithm~\ref{alg:skyline_generation} summarizes the skyline generation procedu
 
 Not every generated skyline is suitable for localization. Viewpoints located on flat terrain often produce skyline profiles with little variation. These profiles appear similar at many different locations and reduce matching accuracy.
 
-Each skyline profile is evaluated before being added to the database. Profiles with insufficient variation are removed using a minimum elevation-angle condition so that very flat and uninformative profiles are excluded.
+Each skyline profile is evaluated before being added to the database. Profile quality is assessed using simple geometric characteristics, such as skyline variability and peak prominence. Nearly flat skylines with little discriminative information are removed before storage.
 
 Removing unsuitable viewpoints reduces the database size while improving the distinctiveness of the remaining skyline profiles.
 
@@ -274,9 +274,13 @@ The generated images and masks are stored separately, while the viewpoint inform
 
 The first step of localization is separating the sky from the surrounding terrain. The resulting binary mask is used to extract the skyline profile for matching. Since mountain images often contain snow, shadows, clouds, and changing illumination, simple image processing techniques do not produce reliable results. A deep learning model is used to perform the segmentation.
 
-To improve generalization beyond purely synthetic scenes, the segmentation stage is also informed by examples from the GeoPose3K benchmark \cite{brejcha2019geopose3k}. GeoPose3K provides real mountain photographs with known camera poses, making it useful for exposing the model to realistic skyline boundaries, lighting variation, and terrain appearance that are difficult to capture through rendering alone.
+To improve generalization beyond purely synthetic scenes, the segmentation stage is also informed by examples from the GeoPose3K benchmark \cite{brejcha2017geopose3k}. GeoPose3K provides real mountain photographs with known camera poses, making it useful for exposing the model to realistic skyline boundaries, lighting variation, and terrain appearance that are difficult to capture through rendering alone.
 
-The segmentation process consists of three stages. First, the input image is processed by a U-Net model to predict the sky region. Next, the predicted mask is converted into a binary image. Finally, connected component analysis and edge refinement are applied to improve the skyline boundary.
+The segmentation process consists of three stages. First, the input image is processed by a U-Net model with a MobileNetV3 encoder to predict the sky region. Next, the predicted mask is converted into a binary image. Finally, connected component analysis and edge refinement are applied to improve the skyline boundary.
+
+U-Net was selected instead of DeepLabV3+ because skyline boundary accuracy is critical for matching. The task is binary segmentation, so a lighter decoder is sufficient. Skip connections preserve edge detail from shallow layers and help keep ridge boundaries sharp. This improves alignment with reference skylines while keeping computation lower.
+
+MobileNetV3 was selected for smartphone-oriented deployment. It uses low memory and supports fast inference. At the same time, it provides good segmentation accuracy for this task.
 
 Figure~\ref{fig:segmentation_pipeline} illustrates the segmentation process.
 
@@ -382,7 +386,7 @@ line/.style={->,thick}
 
 The skyline is extracted independently for every image column. Starting from the top of the binary mask, the first terrain pixel is identified and recorded as the skyline position. If no terrain pixel is found in a column, the bottom of the image is used.
 
-Small discontinuities caused by segmentation errors are removed using a median filter. This smooths the extracted skyline while preserving the overall terrain shape.
+A median filter with a window size of 5 is applied to remove isolated noise while preserving the skyline shape.
 
 \subsection{Elevation Angle Computation}
 \label{sec:elevation_computation}
@@ -397,6 +401,8 @@ The elevation angle of each viewing ray is computed as
 \end{equation}
 
 where $r_y$ is the vertical component of the normalized viewing ray.
+
+Elevation angles are used instead of pixel coordinates because they are independent of image resolution. They also provide a common geometric representation for direct comparison with reference skylines.
 
 The corresponding azimuth angle is computed as
 
@@ -413,11 +419,11 @@ The skyline profile is interpolated onto a uniform azimuth grid before matching.
 
 Some images contain very little visible terrain. These images produce skyline profiles with almost no variation and are unsuitable for localization.
 
-Before matching, every extracted profile is checked for sufficient terrain variation. Profiles that do not satisfy the required variation are discarded. This prevents unreliable skyline profiles from producing incorrect localization results.
+Before matching, every extracted profile is checked for profile quality. The check uses simple geometric characteristics, such as skyline variability and peak prominence. Nearly flat skylines are discarded because they contain little discriminative information.
 
 \section{Skyline Matching}
 
-The extracted skyline profile is compared with the reference skyline database to estimate the camera location. Since the database contains a large number of skyline profiles, the matching process is divided into two stages. The first stage removes unlikely candidates using fast correlation, while the second stage performs detailed alignment on the remaining candidates.
+The extracted skyline profile is compared with the reference skyline database to estimate the camera location. Since the database contains a large number of skyline profiles, the matching process is divided into two stages. The first stage removes unlikely candidates using fast correlation, while the second stage performs detailed alignment on the remaining candidates. The direction in which the input image was taken is usually unknown. Therefore, the system searches for the orientation that produces the best match between the query skyline and each reference skyline.
 
 Figure~\ref{fig:matching_pipeline} illustrates the skyline matching process.
 
@@ -470,17 +476,21 @@ Each feature is normalized before matching. This reduces the effect of differenc
 
 \subsection{Candidate Selection}
 
+Because the viewing direction of the query image is generally unknown, the query skyline is compared against all possible azimuth orientations of each reference skyline. If smartphone compass information is available, the search can be restricted to headings close to the measured orientation.
+
 The first stage compares the query skyline with every reference skyline using cross-correlation. The correlation scores obtained from the three feature sequences are combined into a single similarity score.
 
 Because a query photo covers only a limited field of view while each reference skyline covers 360\textdegree, the query profile is evaluated at multiple azimuth offsets over the full reference profile. This sliding-window correlation step finds the best matching azimuth window before detailed refinement.
 
 The best correlation also provides the rotational alignment between the query skyline and the reference skyline. If compass information is available, only rotations close to the measured heading are considered. This reduces the search space and removes unlikely candidates.
 
-To reduce computation, an initial search is performed using a subset of viewpoints. Only the strongest candidates are selected for detailed matching.
+To reduce computation, an initial search is performed using a coarse spatial grid containing every Nth viewpoint. Neighbouring viewpoints are then evaluated at full resolution.
+
+Height filtering is used as an optional preliminary stage during coarse candidate filtering. Smartphone altitude from barometer or \gls{gnss} provides an approximate elevation. Viewpoints whose elevations differ substantially are discarded before skyline matching. This reduces the number of candidates, and Chapter 6 evaluates its effect on localization performance and computation time.
 
 \subsection{Profile Alignment}
 
-The selected candidates are refined using \gls{dtw}. Unlike direct point-by-point comparison, \gls{dtw} allows small local differences between skyline profiles while preserving the overall terrain shape.
+The selected candidates are refined using \gls{dtw}. Unlike direct point-by-point comparison, \gls{dtw} allows small local differences between skyline profiles while preserving the overall terrain shape. The implementation uses a Sakoe-Chiba banding constraint to limit the warping path, which significantly reduces computation time while remaining effective for comparing closely aligned terrain features.
 
 The alignment cost produced by \gls{dtw} measures the similarity between the query skyline and each candidate skyline. Lower alignment costs indicate better matches.
 
