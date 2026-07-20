@@ -83,7 +83,7 @@ We trained the skyline segmentation model for 15 epochs using GeoPose3K's predef
 \label{fig:unet_training_result}
 \end{figure}
 
-Both training and validation loss decrease over epochs, and validation \gls{iou} stays high near the end of training. This means the model is learning the sky-terrain boundary under our mixed training setup (synthetic + GeoPose). During training, we also applied data augmentation to increase sample diversity. It still does not by itself prove the same quality on all real field photos, where haze, exposure, and foreground objects can differ from training data.
+Both training and validation loss decrease over epochs, and validation \gls{iou} stays high near the end of training. This suggests the model is learning the sky-terrain boundary under our mixed training setup (synthetic + GeoPose). During training, we also applied data augmentation to increase sample diversity. It still does not by itself indicate the same quality on all real field photos, where haze, exposure, and foreground objects can differ from training data.
 
 \section{Localization Accuracy}
 

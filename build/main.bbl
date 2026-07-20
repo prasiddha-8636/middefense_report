@@ -42,6 +42,14 @@ O.~Saurer, G.~Baatz, K.~K{\"o}ser, L.~Ladick{\'y}, and M.~Pollefeys, ``Image
   based geo-localization in the {Alps},'' \emph{International Journal of
   Computer Vision}, vol. 116, no.~3, pp. 213--225, 2016.
 
+\bibitem{crippen2016nasadem}
+R.~Crippen \emph{et~al.}, ``{NASADEM} global elevation model: Methods and
+  progress,'' in \emph{ISPRS Archives}, vol. XLI-B4, 2016.
+
+\bibitem{tadono2014alos}
+T.~Tadono \emph{et~al.}, ``Precise global {DEM} generation by {ALOS PRISM},''
+  in \emph{ISPRS Annals}, vol. II-4, 2014, pp. 71--76.
+
 \bibitem{Li2022}
 H.~Li, J.~Zhao, B.~Yan, L.~Yue, and L.~Wang, ``Global {DEMs} vary from one to
   another: An evaluation of newly released {Copernicus}, {NASA} and {AW3D30}
@@ -93,5 +101,29 @@ Z.~Liu, F.~Guo, H.~Liu, X.~Xiao, and J.~Tang, ``{CMLocate}: A cross-modal
   automatic visual geo-localization framework for a natural environment without
   {GNSS} information,'' \emph{IET Image Processing}, vol.~17, no.~12, pp.
   3524--3540, 2023.
+
+\bibitem{steger2022horayzon}
+C.~R. Steger, B.~Steger, and C.~Sch{\"a}r, ``{HORAYZON} v1.2: an efficient and
+  flexible ray-tracing algorithm to compute horizon and sky view factor,''
+  \emph{Geoscientific Model Development}, vol.~15, pp. 6817--6840, 2022.
+
+\bibitem{ronneberger2015unet}
+O.~Ronneberger, P.~Fischer, and T.~Brox, ``U-{N}et: Convolutional networks for
+  biomedical image segmentation,'' in \emph{Medical Image Computing and
+  Computer-Assisted Intervention (MICCAI)}, 2015.
+
+\bibitem{howard2019mobilenetv3}
+A.~Howard \emph{et~al.}, ``Searching for {MobileNetV3},'' in \emph{IEEE/CVF
+  International Conference on Computer Vision (ICCV)}, 2019.
+
+\bibitem{canny1986edge}
+J.~Canny, ``A computational approach to edge detection,'' \emph{IEEE
+  Transactions on Pattern Analysis and Machine Intelligence}, vol.~8, no.~6,
+  pp. 679--698, 1986.
+
+\bibitem{sakoe1978dtw}
+H.~Sakoe and S.~Chiba, ``Dynamic programming algorithm optimization for spoken
+  word recognition,'' \emph{IEEE Transactions on Acoustics, Speech, and Signal
+  Processing}, vol.~26, no.~1, pp. 43--49, 1978.
 
 \end{thebibliography}

@@ -162,7 +162,7 @@ The elevation angle is computed as
 \label{eq:elevation_angle}
 \end{equation}
 
-where $h_t$ is the terrain elevation, $h_o$ is the observer elevation, and $d$ is the horizontal distance between the observer and the terrain point. Equation~(4-1) is written in its flat-Earth form for clarity. In the implemented pipeline, Earth curvature and atmospheric refraction---which can introduce $\sim 0.1^\circ$ of elevation angle error at 30~km---are corrected internally by HORAYZON during skyline generation.
+where $h_t$ is the terrain elevation, $h_o$ is the observer elevation, and $d$ is the horizontal distance between the observer and the terrain point. Equation~(4-1) is written in its flat-Earth form for clarity. In the implemented pipeline, Earth curvature and atmospheric refraction---which can introduce $\sim 0.1^\circ$ of elevation angle error at 30~km---are corrected internally by HORAYZON during skyline generation \cite{steger2022horayzon}.
 
 Repeating this process for all azimuth directions produces a one-dimensional skyline profile that describes the visible terrain surrounding the viewpoint.
 
@@ -276,7 +276,7 @@ The first step of localization is separating the sky from the surrounding terrai
 
 To improve generalization beyond purely synthetic scenes, the segmentation stage is also informed by examples from the GeoPose3K benchmark \cite{brejcha2017geopose3k}. GeoPose3K provides real mountain photographs with known camera poses, making it useful for exposing the model to realistic skyline boundaries, lighting variation, and terrain appearance that are difficult to capture through rendering alone.
 
-The segmentation process consists of three stages. First, the input image is processed by a U-Net model with a MobileNetV3 encoder to predict the sky region. Next, the predicted mask is converted into a binary image. Finally, connected component analysis and edge refinement are applied to improve the skyline boundary.
+The segmentation process consists of three stages. First, the input image is processed by a U-Net model with a MobileNetV3 encoder to predict the sky region \cite{ronneberger2015unet,howard2019mobilenetv3}. Next, the predicted mask is converted into a binary image. Finally, connected component analysis and edge refinement are applied to improve the skyline boundary.
 
 U-Net was selected instead of DeepLabV3+ because skyline boundary accuracy is critical for matching. The task is binary segmentation, so a lighter decoder is sufficient. Skip connections preserve edge detail from shallow layers and help keep ridge boundaries sharp. This improves alignment with reference skylines while keeping computation lower.
 
@@ -332,7 +332,7 @@ This produces an initial estimate of the sky region. Although the overall sky bo
 
 The predicted mask is refined before skyline extraction. The first refinement step removes disconnected sky regions using connected component analysis. Only sky regions connected to the top boundary of the image are retained.
 
-The skyline boundary is then refined using Canny edge detection. For every image column, the detected skyline is adjusted to the nearest edge within a local search window. This improves the alignment between the predicted skyline and the visible mountain ridge.
+The skyline boundary is then refined using Canny edge detection \cite{canny1986edge}. For every image column, the detected skyline is adjusted to the nearest edge within a local search window. This improves the alignment between the predicted skyline and the visible mountain ridge.
 
 The final output is a binary image where sky pixels have a value of 0 and terrain pixels have a value of 255. This mask is passed to the skyline extraction stage.
 
@@ -490,7 +490,7 @@ Height filtering is used as an optional preliminary stage during coarse candidat
 
 \subsection{Profile Alignment}
 
-The selected candidates are refined using \gls{dtw}. Unlike direct point-by-point comparison, \gls{dtw} allows small local differences between skyline profiles while preserving the overall terrain shape. The implementation uses a Sakoe-Chiba banding constraint to limit the warping path, which significantly reduces computation time while remaining effective for comparing closely aligned terrain features.
+The selected candidates are refined using \gls{dtw}. Unlike direct point-by-point comparison, \gls{dtw} allows small local differences between skyline profiles while preserving the overall terrain shape. The implementation uses a Sakoe-Chiba banding constraint \cite{sakoe1978dtw} to limit the warping path, which significantly reduces computation time while remaining effective for comparing closely aligned terrain features.
 
 The alignment cost produced by \gls{dtw} measures the similarity between the query skyline and each candidate skyline. Lower alignment costs indicate better matches.
 
